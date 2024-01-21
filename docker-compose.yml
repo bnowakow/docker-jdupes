@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  jdupes:
+    build: .
+    image: bnowakow/jdupes:0.1-jdupes_1.27.3
+    entrypoint: jdupes -v
+    environment:
+        UID: 1000
+        GUID: 1000
+        UMASK: 000
+    container_name: jdupes
+
