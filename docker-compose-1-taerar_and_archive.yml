@@ -1,0 +1,16 @@
+version: "3.3"
+services:
+  jdupes:
+    entrypoint: jdupes --delete --no-prompt --recurse --soft-abort --hash-db=/jdupes/jdupes_hashdb.txt --param-order /mnt/ro /mnt/rw
+    volumes:
+        - /mnt/MargokPool/home/sup/code/docker-jdupes:/jdupes
+        - /mnt/MargokPool/archive/TimeMachine:/mnt/rw/TimeMachine:rw
+        - /mnt/MargokPool/archive/Backups:/mnt/rw/Backups:ro
+        - /mnt/MargokPool/archive/Documents:/mnt/ro/Documents:ro
+        - /mnt/MargokPool/archive/Games:/mnt/ro/Games:ro
+        - /mnt/MargokPool/archive/Movies:/mnt/ro/Movies:ro
+        - /mnt/MargokPool/archive/Pictures:/mnt/ro/Pictures:ro
+        - /mnt/MargokPool/archive/Software:/mnt/ro/Software:ro
+        - /mnt/MargokPool/archive/TO-SORT:/mnt/ro/TO-SORT:ro
+        - /mnt/MargokPool/archive/Zrzuty-ekranu:/mnt/ro/Zrzuty-ekranu:ro
+

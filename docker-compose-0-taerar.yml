@@ -1,0 +1,8 @@
+version: "3.3"
+services:
+  jdupes:
+    entrypoint: jdupes --delete --no-prompt --recurse --soft-abort --hash-db=/jdupes/jdupes_hashdb.txt --param-order /mnt/rw
+    volumes:
+        - /mnt/MargokPool/home/sup/code/docker-jdupes:/jdupes
+        - /mnt/MargokPool/archive/TimeMachine:/mnt/rw/TimeMachine:rw
+
